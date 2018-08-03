@@ -1,0 +1,33 @@
+h1 {
+  color:blue;
+  text-align-last:center;
+}
+
+h2 {
+  color:brown;
+  text-align-last:center;
+}
+
+label {
+  border-style:inset;
+}
+
+.label {
+  color:green;
+  background-color:yellow;
+  font-weight:bold;
+}
+.calcbtn {
+  display:block;
+  margin: 0 auto;
+}
+
+.greeting {
+  color:red;
+  background-color:green;
+  font-style:italic;
+}
+
+#date {
+  color:brown;
+}

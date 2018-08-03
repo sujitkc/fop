@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calendar</title>
+    <link rel="stylesheet" type="text/css" href="../mystyle.css">
+    <script src="calendar.js"></script>
+    <script>
+      function week_day() {
+        var day = Number(document.getElementById("day").value);
+        var month = month_of_string(document.getElementById("month").value);
+        var year = Number(document.getElementById("year").value);
+        try {
+          var dt = new MyDate(day, month, year);
+          var weekday = get_week_day(dt);
+          document.getElementById("ans").innerHTML = string_of_weekday(weekday);
+        }
+        catch(err) {
+          alert(err);
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <div align="center">
+      <span class="label">Day: </span><input type="text" id="day" name="day">
+      <span class="label">Month: </span><input type="text" id="month" name="year">
+      <span class="label">Year: </span><input type="text" id="year" name="year"><br><br>
+      <span class="label">Weekday: </span><label id="ans" name="y">Weekday</label><br><br>
+      <button class="calcbtn" onclick="week_day()">Get Weekday</button>
+    </div>
+  </body>
+</html>
